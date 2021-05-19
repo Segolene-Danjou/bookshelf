@@ -1,0 +1,4 @@
+%syntax-version=1.0.0
+%project=bookshelf
+
+init 2021-05-19T07:53:03Z Segolene-Danjou <segolene.danjou@gmail.com> # structure de base de la bdd
