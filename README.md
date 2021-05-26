@@ -55,7 +55,3 @@ Démarrage du serveur
 ```bash
   npm run start
 ```
-
-## Variables d'environment
-
-…

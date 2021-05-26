@@ -2,3 +2,11 @@
 %project=bookshelf
 
 init 2021-05-19T07:53:03Z Segolene-Danjou <segolene.danjou@gmail.com> # structure de base de la bdd
+fix_init 2021-05-19T09:02:35Z Segolene-Danjou <segolene.danjou@gmail.com> # modifications sur la structure de base
+author_unique 2021-05-19T15:03:25Z Segolene-Danjou <segolene.danjou@gmail.com> # ajout de la contrainte d'unicité sur author
+function 2021-05-19T15:54:28Z Segolene-Danjou <segolene.danjou@gmail.com> # ajout de functions à la BDD
+more_function 2021-05-19T17:05:01Z Segolene-Danjou <segolene.danjou@gmail.com> # ajout fonction update, delete
+delete_cascade 2021-05-19T18:12:44Z Segolene-Danjou <segolene.danjou@gmail.com> # oups on avait oublié de dire qu'il faut supprimer les references en même temps que les entités
+book_function 2021-05-26T14:22:29Z Segolene-Danjou <segolene.danjou@gmail.com> # ajout de fonctions pour les livres
+publisher_function 2021-05-26T15:02:34Z Segolene-Danjou <segolene.danjou@gmail.com> # ajout de fonctions pour les publishers
+genres_function 2021-05-26T15:42:42Z Segolene-Danjou <segolene.danjou@gmail.com> # ajout de fonctions pour les genres
