@@ -101,6 +101,14 @@ router.route('/genre')
      * @returns {Error} 500 - Une erreur serveur
      */
     .get(controllerFactory.getAll('genre'))
+    /**
+     * Ajouter un genre
+     * @route POST /genre
+     * @param {GenreInput.model} Genre.body.required - Un objet contenant les informations d'un éditeur
+     * @returns {Genre} 200 - Genre créé 
+     * @returns {Error} 500 - Genre déjà présent dans la BDD
+     */
+     .post(validate.body(schemas.genreInsertSchema), controllerFactory.add('genre'));
     
 // Resource Not Found
 router.use(errorController.resourceNotFound);

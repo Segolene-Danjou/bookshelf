@@ -10,4 +10,5 @@ const updateSchema = Joi.object({
     country_iso_2: Joi.string().length(2)
 }).required();
 
+
 module.exports = { insertSchema, updateSchema };

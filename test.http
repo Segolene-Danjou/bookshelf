@@ -69,3 +69,11 @@ Content-Type: application/json
     "genre_id": [2],
     "author_id": [1,2]
 }
+
+### Ajout d'un genre
+POST http://localhost:3000/api/genre
+Content-Type: application/json
+
+{
+    "label": "Roman"
+}

@@ -4,7 +4,7 @@ Ceci est une API de gestion de bibliothèque ouverte à tous.
 
 ## Auteurs
 
-- [@YannOclock](https://github.com/Segolene-Danjou)
+- [@Segolene-Danjou](https://github.com/Segolene-Danjou)
 
 ## Stack
 
