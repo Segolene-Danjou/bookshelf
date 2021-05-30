@@ -1,6 +1,36 @@
 const client = require('../client');
 const CoreModel = require('./coreModel');
 
+/**
+ * @typedef Book
+ * @property {number} id - Identifiant unique
+ * @property {string} reference - Référence du livre
+ * @property {string} title - Titre du livre
+ * @property {string} locale - Langue et pays du livre
+ * @property {string} year - Date de publication du livre (YYYY-MM-DD)
+ * @property {number} page_count - Nombre de pages
+ * @property {number} chapter_count - Nombre de chapitres
+ * @property {string} front_cover - Page de garde
+ * @property {string} cover - Première de couverture
+ * @property {number} publisher_id - id de la maison d'édition
+ * @property {string} created_at - Date de création du livre (date ISO 8601)
+ * @property {string} updated_at - Date de mise à jour du livre (date ISO 8601)
+ * @property {string} deleted_at - Date de suppression du livre (date ISO 8601)
+ */
+
+/**
+ * @typedef BookInput
+ * @property {string} reference - Référence du livre
+ * @property {string} title - Titre du livre
+ * @property {string} locale - Langue et pays du livre
+ * @property {string} year - Date de publication du livre (YYYY-MM-DD)
+ * @property {number} page_count - Nombre de pages
+ * @property {number} chapter_count - Nombre de chapitres
+ * @property {string} front_cover - Page de garde
+ * @property {string} cover - Première de couverture
+ * @property {number} publisher_id - id de la maison d'édition
+ */
+
 class BookModel extends CoreModel {
 
     /**

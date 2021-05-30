@@ -13,4 +13,9 @@ const {
     updateSchema: genreUpdateSchema,
 }  = require('./genreSchema');
 
-module.exports = { authorInsertSchema, authorUpdateSchema, publisherInsertSchema, publisherUpdateSchema, genreInsertSchema, genreUpdateSchema,  };
+const { 
+    insertSchema: bookInsertSchema, 
+    updateSchema: bookUpdateSchema,
+}  = require('./bookSchema');
+
+module.exports = { authorInsertSchema, authorUpdateSchema, publisherInsertSchema, publisherUpdateSchema, genreInsertSchema, genreUpdateSchema, bookInsertSchema, bookUpdateSchema};

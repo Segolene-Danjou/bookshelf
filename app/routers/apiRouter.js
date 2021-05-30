@@ -83,7 +83,7 @@ router.route('/books/:id(\\d+)')
      * @returns {Book.model} 200 - un livre
      * @returns {Error} 500 - Une erreur serveur
      */
-    .get(bookController.getById)
+    .get(controllerFactory.getById)
     /**
      * Mise à jour d'un livre
      * @route PATCH /books/{id}
@@ -129,7 +129,7 @@ router.route('/publishers/:id(\\d+)')
      * @returns {Publisher.model} 200 - la maison d'édition
      * @returns {Error} 500 - Une erreur serveur
      */
-    .get(publisherController.getById)
+    .get(controllerFactory.getById)
     /**
      * Mise à jour d'une maison d'édition
      * @route PATCH /publishers/{id}
@@ -174,7 +174,7 @@ router.route('/genres/:id(\\d+)')
       * @returns {Genre.model} 200 - Le genre
       * @returns {Error} 500 - Une erreur serveur
       */
-     .get(genreController.getById)
+     .get(controllerFactory.getById)
      /**
       * Mise à jour d'un genre
       * @route PATCH /genres/{id}

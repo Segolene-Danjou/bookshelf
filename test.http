@@ -77,3 +77,6 @@ Content-Type: application/json
 {
     "label": "Roman"
 }
+
+### Récupération d'un livre
+GET http://localhost:3000/api/books/1
