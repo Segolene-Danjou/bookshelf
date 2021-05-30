@@ -10,6 +10,7 @@ const schemas = require('../validations/schemas');
 const validate = require('../validations/validate');
 const controllerFactory = require('../controllers/controllerFactory');
 const authorController = require('../controllers/authorController');
+const bookController = require('../controllers/bookController');
 const errorController = require('../controllers/errorController');
 
 const router = express.Router();
@@ -83,7 +84,7 @@ router.route('/books/:id(\\d+)')
      * @returns {Book.model} 200 - un livre
      * @returns {Error} 500 - Une erreur serveur
      */
-    .get(controllerFactory.getById)
+    .get(bookController.getById)
     /**
      * Mise à jour d'un livre
      * @route PATCH /books/{id}
