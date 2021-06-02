@@ -79,4 +79,4 @@ Content-Type: application/json
 }
 
 ### Récupération d'un livre
-GET http://localhost:3000/api/books/1
+GET http://localhost:3000/api/books/2

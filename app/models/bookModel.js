@@ -93,15 +93,16 @@ class BookModel extends CoreModel {
 
     static async findByPk(id) {
         console.log('find by pk bookModel');
-        const result = await client.query(`SELECT 
+        const result = await client.query(`
+        SELECT 
         book.*,
         ARRAY_AGG(DISTINCT genre.id) as genre_id,
         ARRAY_AGG(DISTINCT author.id) as author_id
-        FROM ${this.tableName} 
+        FROM ${this.tableName}
         JOIN book_has_genre ON book.id = book_has_genre.book_id
         JOIN genre ON genre.id = book_has_genre.genre_id
         JOIN book_has_author ON book.id = book_has_author.book_id
-        JOIN author ON author.id = book_has_author.author_id WHERE id = $1
+        JOIN author ON author.id = book_has_author.author_id WHERE book.id = $1
         GROUP BY book.id`, [id]);
 
         if (!result.rows[0]) {
