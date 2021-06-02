@@ -111,10 +111,10 @@ class BookModel extends CoreModel {
         return new this(result.rows[0]);
     };
 
-    async insert() {
+    static async insert() {
         try {
             await super.insert();
-            
+            //Si table de liaison, insertion via la table de liaison
             if (this.dataValues.id) {
                 for (const genre_id of this.dataValues.genre_id) {
                     await client.query(`INSERT INTO book_has_genre (book_id, genre_id) VALUES ($1, $2)`, [this.dataValues.id, genre_id])
@@ -128,7 +128,8 @@ class BookModel extends CoreModel {
             console.trace(error)
         }
 
-    }
+    };
+
 
 }
 

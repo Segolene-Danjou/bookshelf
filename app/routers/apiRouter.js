@@ -11,6 +11,7 @@ const validate = require('../validations/validate');
 const controllerFactory = require('../controllers/controllerFactory');
 const authorController = require('../controllers/authorController');
 const bookController = require('../controllers/bookController');
+const publisherController = require('../controllers/publisherController');
 const errorController = require('../controllers/errorController');
 
 const router = express.Router();
@@ -130,7 +131,7 @@ router.route('/publishers/:id(\\d+)')
      * @returns {Publisher.model} 200 - la maison d'édition
      * @returns {Error} 500 - Une erreur serveur
      */
-    .get(controllerFactory.getById)
+    .get(publisherController.getById)
     /**
      * Mise à jour d'une maison d'édition
      * @route PATCH /publishers/{id}

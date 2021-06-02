@@ -1,14 +1,12 @@
 ### resource not found
 GET http://localhost:3000/api/null
 
+###
+###AUTEURS###
+###
+
 ### Récupération des tous les auteurs
 GET http://localhost:3000/api/authors
-
-### Récupération des tous les éditeurs
-GET http://localhost:3000/api/publishers
-
-### Récupération des tous les genre
-GET http://localhost:3000/api/genre
 
 ### Récupération d'un auteur
 GET http://localhost:3000/api/authors/1
@@ -25,15 +23,6 @@ Content-Type: application/json
     "deathdate": "1905-03-24"
 }
 
-### Ajout d'un publisher
-POST http://localhost:3000/api/publishers
-Content-Type: application/json
-
-{
-    "name": "Plon",
-    "country_iso_2": "fr"
-}
-
 ### Update d'auteur
 PATCH http://localhost:3000/api/authors/6
 Content-Type: application/json
@@ -45,6 +34,59 @@ Content-Type: application/json
 ### delete d'auteur
 DELETE http://localhost:3000/api/authors/5
 
+
+
+
+###
+###EDITEURS###
+###
+
+### Récupération des tous les éditeurs
+GET http://localhost:3000/api/publishers
+
+### Ajout d'un publisher
+POST http://localhost:3000/api/publishers
+Content-Type: application/json
+
+{
+    "name": "Plon",
+    "country_iso_2": "fr"
+}
+
+### Récupération d'un éditeur 
+GET http://localhost:3000/api/publishers/1
+
+### Update d'un éditeur OK
+PATCH http://localhost:3000/api/publishers/4
+Content-Type: application/json
+
+{
+    "name": "Plon"
+}
+
+### delete d'un éditeur OK
+DELETE http://localhost:3000/api/publishers/4
+
+
+###
+###GENRES###
+###
+
+### Récupération des tous les genre
+GET http://localhost:3000/api/genre
+
+### Ajout d'un genre
+POST http://localhost:3000/api/genre
+Content-Type: application/json
+
+{
+    "label": "Roman"
+}
+
+
+###
+###LIVRES###
+###
 
 ### Récupération de tous les livres
 GET http://localhost:3000/api/books
@@ -70,13 +112,17 @@ Content-Type: application/json
     "author_id": [1,2]
 }
 
-### Ajout d'un genre
-POST http://localhost:3000/api/genre
-Content-Type: application/json
-
-{
-    "label": "Roman"
-}
 
 ### Récupération d'un livre
 GET http://localhost:3000/api/books/2
+
+### Update d'un livre
+PATCH http://localhost:3000/api/books/2
+Content-Type: application/json
+
+{
+    "year": "1996"
+}
+
+### delete d'un livre
+DELETE http://localhost:3000/api/books/1

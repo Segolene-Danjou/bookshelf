@@ -5,7 +5,7 @@ module.exports = {
     async getById(request, response, next){
         try {
             const book = await BookModel.findByPk(request.params.id);
-
+            console.log("book controller");
             if(!book){
                 return next();
             }
