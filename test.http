@@ -68,20 +68,36 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/publishers/4
 
 
+
+
 ###
 ###GENRES###
 ###
 
 ### Récupération des tous les genre
-GET http://localhost:3000/api/genre
+GET http://localhost:3000/api/genres
 
 ### Ajout d'un genre
-POST http://localhost:3000/api/genre
+POST http://localhost:3000/api/genres
+Content-Type: application/json
+
+{
+    "label": "Romans"
+}
+
+### Récupération d'un genre OK
+GET http://localhost:3000/api/genres/1
+
+### Update d'un genre //!NOP!\\
+PATCH http://localhost:3000/api/genres/4
 Content-Type: application/json
 
 {
     "label": "Roman"
 }
+
+### delete d'un genre 
+DELETE http://localhost:3000/api/genres/3
 
 
 ###

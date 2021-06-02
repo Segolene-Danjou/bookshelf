@@ -1,5 +1,16 @@
 const CoreModel = require('./coreModel');
 
+/**
+ * @typedef Genre
+ * @property {number} id - Identifiant unique
+ * @property {string} label - Genre du livre
+ */
+
+/**
+ * @typedef GenreInput
+* @property {string} label - Genre du livre
+ */
+
 class GenreModel extends CoreModel {
     
     /**

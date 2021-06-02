@@ -12,6 +12,7 @@ const controllerFactory = require('../controllers/controllerFactory');
 const authorController = require('../controllers/authorController');
 const bookController = require('../controllers/bookController');
 const publisherController = require('../controllers/publisherController');
+const genreController = require('../controllers/genreController');
 const errorController = require('../controllers/errorController');
 
 const router = express.Router();
@@ -151,7 +152,7 @@ router.route('/publishers/:id(\\d+)')
     .delete(controllerFactory.delete('publisher'));
 
 
-router.route('/genre')
+router.route('/genres')
     /**
      * Liste des genre
      * @route GET /genre
@@ -176,7 +177,7 @@ router.route('/genres/:id(\\d+)')
       * @returns {Genre.model} 200 - Le genre
       * @returns {Error} 500 - Une erreur serveur
       */
-     .get(controllerFactory.getById)
+      .get(genreController.getById)
      /**
       * Mise à jour d'un genre
       * @route PATCH /genres/{id}
