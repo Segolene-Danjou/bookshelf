@@ -55,3 +55,5 @@ Démarrage du serveur
 ```bash
   npm run start
 ```
+
+Pour voir les routes saisir l'adresse http://localhost:3000/api-docs dans la barre de recherche du navigateur.
